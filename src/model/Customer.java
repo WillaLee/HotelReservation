@@ -10,7 +10,7 @@ public class Customer {
     private String email;
 
     public Customer(String firstName, String lastName, String email){
-        String emailRegex = "^(.+)@(.+).com";
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
         this.firstName = firstName;
         this.lastName = lastName;
         Pattern pattern = Pattern.compile(emailRegex);
@@ -20,6 +20,10 @@ public class Customer {
         else {
             throw new IllegalArgumentException("Error, invalid email.");
         }
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public String toString(){

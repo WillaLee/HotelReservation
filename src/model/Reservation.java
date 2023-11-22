@@ -16,6 +16,18 @@ public class Reservation {
         this.checkOutDate = checkOutDate;
     }
 
+    public Calendar getCheckInDate() {
+        return checkInDate;
+    }
+
+    public Calendar getCheckOutDate() {
+        return checkOutDate;
+    }
+
+    public IRoom getRoom() {
+        return room;
+    }
+
     @Override
     public String toString() {
         return "Reservation\n" +

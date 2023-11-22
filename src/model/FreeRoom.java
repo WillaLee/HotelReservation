@@ -6,4 +6,9 @@ public class FreeRoom extends Room{
         super(roomNumber, (double) 0, enumeration);
     }
 
+    @Override
+    public boolean isFree() {
+        return true;
+    }
+
 }
